@@ -12,9 +12,6 @@ Modify `dialect` property in `src/config/sequelize.js` and install required npm 
 
 For more info, visit [sequelize docs](https://sequelize.org/docs/v6/other-topics/dialect-specific-things/)
 
-**Note:** The default and active database is postgresql.
-If you want to use postgresql in your project, you don't need to make any changes.
-
 | Database | Dialect | Required npm Package(s) |
 | -------- | ------- | ----------------------- |
 | MySQL    | mysql   | `yarn add mysql2`       |
