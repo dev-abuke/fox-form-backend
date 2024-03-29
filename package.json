@@ -1,7 +1,7 @@
 {
-  "name": "kelem-backend",
+  "name": "fox-backend",
   "version": "1.0.0",
-  "description": "A backend for kelem for Node.js api projects",
+  "description": "A backend for fox form for Node.js api projects",
   "repository": {
     "type": "git",
     "url": "https://github.com/mucahitnezir/express-starter.git"
@@ -21,6 +21,9 @@
     "db:migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
+    "@react-email/components": "^0.0.15",
+    "@react-email/render": "^0.0.12",
+    "@react-email/tailwind": "^0.0.14",
     "@sentry/node": "^6.7.2",
     "@sentry/tracing": "^6.7.2",
     "bcrypt": "^5.0.0",
@@ -35,7 +38,7 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
     "mysql2": "^3.6.5",
-    "nodemailer": "^6.4.16",
+    "nodemailer": "^6.9.13",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "redis": "^3.1.1",
