@@ -2,7 +2,6 @@ import createError from "http-errors";
 
 import db from "@/database";
 import { mailHelper, emailTemplete } from "@/helpers";
-import { render } from "@react-email/render";
 // import { mailHelper,  } from '@/helpers';
 // import { Email } from './email';
 
