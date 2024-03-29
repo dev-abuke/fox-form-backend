@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "fox-backend",
   "version": "1.0.0",
   "description": "A backend for fox form for Node.js api projects",
