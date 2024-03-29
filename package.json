@@ -1,8 +1,7 @@
 {
-  "type": "module",
-  "name": "fox-backend",
+  "name": "kelem-backend",
   "version": "1.0.0",
-  "description": "A backend for fox form for Node.js api projects",
+  "description": "A backend for kelem for Node.js api projects",
   "repository": {
     "type": "git",
     "url": "https://github.com/mucahitnezir/express-starter.git"
@@ -59,5 +58,9 @@
     "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "sequelize-cli": "^6.4.1"
+  },
+  "engines": {
+    "node": "20.9",
+    "npm": "8"
   }
 }
