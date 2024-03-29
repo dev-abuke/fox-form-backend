@@ -21,9 +21,6 @@
     "db:migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.15",
-    "@react-email/render": "^0.0.12",
-    "@react-email/tailwind": "^0.0.14",
     "@sentry/node": "^6.7.2",
     "@sentry/tracing": "^6.7.2",
     "bcrypt": "^5.0.0",
@@ -61,9 +58,5 @@
     "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "sequelize-cli": "^6.4.1"
-  },
-  "engines": {
-    "node": "20.11.1",
-    "npm": "8"
   }
 }
