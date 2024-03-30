@@ -30,8 +30,7 @@
 
 // const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "";
 
-export const VercelInviteUserEmail = ({ username, company }) => {
-
+export const VercelInviteUserEmail = ({ username, lastName, company }) => {
   // const previewText = `Join ${invitedByUsername} on Vercel`;
 
   return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -178,7 +177,7 @@ export const VercelInviteUserEmail = ({ username, company }) => {
                         <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0px"><img src="https://efqioos.stripocdn.email/content/guids/CABINET_ef183ffbda4b41785ff855ea5744499c5fb621e6f1f5c2aa4fa5abfaa82c4e6d/images/background.jpg" alt="" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none" class="adapt-img" width="510"></td>
                        </tr>
                        <tr>
-                        <td align="center" class="es-m-p0r es-m-p0l es-text-4574" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-right:40px;padding-left:40px"><p align="center" style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:21px !important;letter-spacing:0;color:#333333;font-size:14px"><em>Greetings <b>${username}</b> From <b>${company}</b>, Thank you for reaching out to us regarding your event inquiry. We're thrilled to hear about your interest in hosting an event with us. We're excited about the opportunity to potentially work together to make your event a memorable one.</em></p></td>
+                        <td align="center" class="es-m-p0r es-m-p0l es-text-4574" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-right:40px;padding-left:40px"><p align="center" style="Margin:0;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:21px !important;letter-spacing:0;color:#333333;font-size:14px"><em>Greetings <b>${username} ${" "} ${lastName}</b> From <b>${company}</b>, Thank you for reaching out to us regarding your event inquiry. We're thrilled to hear about your interest in hosting an event with us. We're excited about the opportunity to potentially work together to make your event a memorable one.</em></p></td>
                        </tr>
                        <tr>
                         <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#F1C232;border-width:0px;display:inline-block;border-radius:5px;width:auto"><a href="https://t.me/foxeventss" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none !important;mso-line-height-rule:exactly;color:#FFFFFF;font-size:20px;padding:10px 30px 10px 30px;display:inline-block;background:#F1C232;border-radius:5px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;letter-spacing:0;mso-padding-alt:0;mso-border-alt:10px solid #F1C232">Contact Us</a></span></td>

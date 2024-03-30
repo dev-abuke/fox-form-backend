@@ -14,6 +14,7 @@ export const sendMail = async (req, res, next) => {
   console.log("The request user in Send Mail is: ", req.body);
   const emailHtml = emailTemplete.VercelInviteUserEmail({
     username: req.body["first-name"],
+    lastName: req.body["last-name"],
     company: req.body["company-name"],
   });
 
