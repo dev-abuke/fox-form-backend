@@ -539,6 +539,9 @@ export const VercelInviteUserEmail = ({ username, lastName, company }) => {
 };
 
 export const foxEmail = (data) => {
+
+  const remaining_days = Math.floor((new Date(data['event-date']) - new Date()) / (1000 * 60 * 60 * 24));
+
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -590,7 +593,7 @@ export const foxEmail = (data) => {
                   </tr>
                   <tr>
                       <td>Event Date</td>
-                      <td> ${data['event-date']}</td>
+                      <td> ${new Date(data['event-date']).toISOString()} ${" : After " + remaining_days + " Days"} </td>
                   </tr>
                   <tr>
                       <td>Number of People</td>
