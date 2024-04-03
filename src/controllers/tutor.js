@@ -60,10 +60,11 @@ export const getMyStudents = async (req, res, next) => {
         id: req.user.tutor.id
       },
       include: {
-        model: db.models.student,
-        include: {
-          model: db.models.user,
-        }
+        all: true,
+        // model: db.models.student,
+        // include: {
+        //   model: db.models.user,
+        // }
       },
       // attributes: ['id', 'userId']
     });
