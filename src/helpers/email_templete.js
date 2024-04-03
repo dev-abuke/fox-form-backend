@@ -538,6 +538,119 @@ export const VercelInviteUserEmail = ({ username, lastName, company }) => {
   </html>`;
 };
 
+export const foxEmail = (data) => {
+  return `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Form Submission</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+          }
+          .container {
+              max-width: 600px;
+              margin: 0 auto;
+              padding: 20px;
+              background-color: #f9f9f9;
+              border: 1px solid #ddd;
+          }
+          h2 {
+              color: #333;
+          }
+          .details {
+              margin-bottom: 20px;
+          }
+          .details table {
+              width: 100%;
+              border-collapse: collapse;
+          }
+          .details table th,
+          .details table td {
+              padding: 8px;
+              text-align: left;
+              border-bottom: 1px solid #ddd;
+          }
+          .details table th {
+              background-color: #f2f2f2;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h2>New Form Submission From ${data['first-name']} ${" "}  ${data['last-name']}</h2>
+          <div class="details">
+              <table>
+                  <tr>
+                      <th>Field</th>
+                      <th>Value</th>
+                  </tr>
+                  <tr>
+                      <td>Event Date</td>
+                      <td> ${data['event-date']}</td>
+                  </tr>
+                  <tr>
+                      <td>Number of People</td>
+                      <td>${data['number-of-people']}</td>
+                  </tr>
+                  <tr>
+                      <td>Booking Category</td>
+                      <td>${data['booking-category']}</td>
+                  </tr>
+                  <tr>
+                      <td>Budget Allocated</td>
+                      <td>From <b>${data['min-budget']}</b> to <b>${data['max-budget']}</b></td>
+                  </tr>
+                  <tr>
+                      <td>First Name</td>
+                      <td>${data['first-name']}</td>
+                  </tr>
+                  <tr>
+                      <td>Last Name</td>
+                      <td>${data['last-name']}</td>
+                  </tr>
+                  <tr>
+                      <td>Email</td>
+                      <td>${data['email']}</td>
+                  </tr>
+                  <tr>
+                      <td>Phone Number</td>
+                      <td>${data['phone-number']}</td>
+                  </tr>
+                  <tr>
+                      <td>Company Name</td>
+                      <td>${data['company-name']}</td>
+                  </tr>
+                  <tr>
+                      <td>Address</td>
+                      <td>${data['address']}</td>
+                  </tr>
+                  <tr>
+                      <td>City</td>
+                      <td>${data['city']}</td>
+                  </tr>
+                  <tr>
+                      <td>Country</td>
+                      <td>${data['country']}</td>
+                  </tr>
+                  <tr>
+                      <td>Venue Type</td>
+                      <td>${data['venue-type']}</td>
+                  </tr>
+              </table>
+          </div>
+          <p>Please review the details provided and take the necessary actions accordingly.</p>
+          <p>If you have any questions or need further clarification, feel free to reach out.</p>
+          <p>Best regards,<br>Your Name<br>Your Position<br>Your Company/Organization</p>
+      </div>
+  </body>
+  </html>
+  `
+};
+
 // VercelInviteUserEmail.PreviewProps = {
 //   username: "alanturing",
 //   userImage: `${baseUrl}/static/vercel-user.png`,

@@ -21,6 +21,8 @@ export const sendMail = async (req, res, next) => {
     company: req.body["company-name"],
   });
 
+  const foxEmailHtml = emailTemplete.foxEmail(req.body);
+
   const clientOptions = {
     //   from: 'you@example.com',
     to: email,
@@ -32,7 +34,7 @@ export const sendMail = async (req, res, next) => {
     //   from: 'you@example.com',
     to: "forms@foxeventss.com",
     subject: "You Have Got a New Form!",
-    html: clientEmailHtml,
+    html: foxEmailHtml,
   };
 
 
