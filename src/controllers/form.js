@@ -24,7 +24,7 @@ export const sendMail = async (req, res, next) => {
   const foxEmailHtml = emailTemplete.foxEmail(req.body);
 
   const clientOptions = {
-    //   from: 'you@example.com',
+    from: "F.O.X Events <no-reply@foxeventss.com>",
     to: email,
     subject: "Thank you for your interest in F.O.X Events!",
     html: clientEmailHtml,
