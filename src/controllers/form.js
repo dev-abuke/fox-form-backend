@@ -24,7 +24,7 @@ export const sendMail = async (req, res, next) => {
   const clientOptions = {
     //   from: 'you@example.com',
     to: email,
-    subject: "Thank you for your interest in Kelem Tutors!",
+    subject: "Thank you for your interest in F.O.X Events!",
     html: clientEmailHtml,
   };
 
