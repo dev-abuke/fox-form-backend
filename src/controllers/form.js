@@ -26,12 +26,12 @@ export const sendMail = async (req, res, next) => {
   const clientOptions = {
     from: "F.O.X Events <no-reply@foxeventss.com>",
     to: email,
-    subject: "Thank you for your interest in F.O.X Events!",
+    subject: "Thank You For Your Interest in F.O.X Events!",
     html: clientEmailHtml,
   };
 
   const foxOptions = {
-    from: "F.O.X Events <no-reply@foxeventss.com>",
+    from: "F.O.X Events Forms <no-reply@foxeventss.com>",
     to: "forms@foxeventss.com",
     subject: "You Have Got a New Form!",
     html: foxEmailHtml,

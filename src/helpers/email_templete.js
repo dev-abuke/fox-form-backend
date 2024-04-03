@@ -586,68 +586,50 @@ export const foxEmail = (data) => {
       <div class="container">
           <h2>New Form Submission From ${data['first-name']} ${" "}  ${data['last-name']}</h2>
           <div class="details">
-              <table>
-                  <tr>
-                      <th>Field</th>
-                      <th>Value</th>
-                  </tr>
-                  <tr>
-                      <td>Event Date</td>
-                      <td> ${new Date(data['event-date']).toDateString()} ${" : After " + remaining_days + " Days"} </td>
-                  </tr>
-                  <tr>
-                      <td>Number of People</td>
-                      <td>${data['number-of-people']}</td>
-                  </tr>
-                  <tr>
-                      <td>Booking Category</td>
-                      <td>${data['booking-category']}</td>
-                  </tr>
-                  <tr>
-                      <td>Budget Allocated</td>
-                      <td>From <b>${data['min-budget']}</b> to <b>${data['max-budget']}</b></td>
-                  </tr>
-                  <tr>
-                      <td>First Name</td>
-                      <td>${data['first-name']}</td>
-                  </tr>
-                  <tr>
-                      <td>Last Name</td>
-                      <td>${data['last-name']}</td>
-                  </tr>
-                  <tr>
-                      <td>Email</td>
-                      <td>${data['email']}</td>
-                  </tr>
-                  <tr>
-                      <td>Phone Number</td>
-                      <td>${data['phone-number']}</td>
-                  </tr>
-                  <tr>
-                      <td>Company Name</td>
-                      <td>${data['company-name']}</td>
-                  </tr>
-                  <tr>
-                      <td>Address</td>
-                      <td>${data['address']}</td>
-                  </tr>
-                  <tr>
-                      <td>City</td>
-                      <td>${data['city']}</td>
-                  </tr>
-                  <tr>
-                      <td>Country</td>
-                      <td>${data['country']}</td>
-                  </tr>
-                  <tr>
-                      <td>Venue Type</td>
-                      <td>${data['venue-type']}</td>
-                  </tr>
+              <table id="formTable">
+              ${
+                Object.keys(data).map(key => {
+                  //clean the key to make it more readable
+                  //when a key name "event-date" is passed, compute the remaining days to the event
+                  if (key === 'event-date') {
+                    return `<tr>
+                        <td>Event Date</td>
+                        <td>${new Date(data[key]).toDateString() + " : Event Is In <b>" + remaining_days}</b> Days</td>
+                    </tr>`
+                  }
+                  //when a key name "min-budget" and "max-budget" is passed, merge them as Budget and display the range but skip this if if this second time it is called
+                  
+                  if (key === 'min-budget') {
+                    //format the min and max budget to number format
+                    data['min-budget'] = parseInt(data['min-budget']).toLocaleString();
+                    data['max-budget'] = parseInt(data['max-budget']).toLocaleString();
+                    return `<tr>
+                        <td>Budget Allocated</td>
+                        <td>From <b>${data['min-budget']}</b> to <b>${data['max-budget']}</b></td>
+                    </tr>`
+                  }
+                  if (key === 'max-budget') {
+                    return ''
+                  }
+                  if(key === 'number-of-people'){
+                    //convert the format "5to20" to "5 - 20"
+                    data[key] = String(data[key]).replace('to', ' - ');
+                    return `<tr>
+                        <td>Number of People</td>
+                        <td>${data[key]}</td>
+                    </tr>`
+                  }
+                  
+                  const new_key = key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                  return `<tr>
+                      <td>${new_key}</td>
+                      <td>${data[key]}</td>
+                  </tr>`
+                }).join('')
+              }
               </table>
           </div>
           <p>Please review the details provided and take the necessary actions accordingly.</p>
-          <p>If you have any questions or need further clarification, feel free to reach out.</p>
-          <p>Best regards,<br>Your Name<br>Your Position<br>Your Company/Organization</p>
       </div>
   </body>
   </html>
