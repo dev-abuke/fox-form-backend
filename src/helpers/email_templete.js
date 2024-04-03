@@ -593,7 +593,7 @@ export const foxEmail = (data) => {
                   </tr>
                   <tr>
                       <td>Event Date</td>
-                      <td> ${new Date(data['event-date']).toISOString()} ${" : After " + remaining_days + " Days"} </td>
+                      <td> ${new Date(data['event-date']).toDateString()} ${" : After " + remaining_days + " Days"} </td>
                   </tr>
                   <tr>
                       <td>Number of People</td>
