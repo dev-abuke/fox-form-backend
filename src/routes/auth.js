@@ -14,7 +14,7 @@ import { isAuthenticated, validate, hasPermission } from '@/middleware';
 
 const router = Router();
 
-router.post('/form', validate(formvalidation.submitFormRules), formController.sendMail);
+// router.post('/form', validate(formvalidation.submitFormRules), formController.sendMail);
 
 // router.post('/login/bot/phone', validate(authValidations.loginWithPhoneRules), authController.loginWithPhone);
 
